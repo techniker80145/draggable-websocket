@@ -230,9 +230,11 @@ section:first-child {
   }
 
   .instructions h2 {
+    position: absolute;
+    top: 4vh;
     max-width: 85vw;
-    font-size: 4vw;
-    line-height: 1.25;
+    font-size: 5.5vw;
+    line-height: 1.3;
   }
 }
 
