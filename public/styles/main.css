@@ -216,12 +216,12 @@ section:first-child {
   }
 
   h1 {
-    font-size: 10vw;
+    font-size: 12vw;
     line-height: 1;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .draggable {
