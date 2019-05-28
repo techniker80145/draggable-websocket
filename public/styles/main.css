@@ -1,0 +1,242 @@
+@font-face {
+  font-family: italia;
+  src: url(../fonts/italia-reg.woff) format("woff"),
+    url(../fonts/italia-reg.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: sport-reg;
+  src: url(../fonts/sporting-reg.woff) format("woff"),
+    url(../fonts/sporting-reg.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: hands;
+  src: url(../fonts/hands-reg.woff) format("woff"),
+    url(../fonts/hands-reg.woff2) format("woff2");
+}
+
+/* ---------- setup ---------- */
+* {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+body {
+  background-color: #0c2340;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+}
+
+/* ---------- styles ---------- */
+h1 {
+  text-align: center;
+  font-family: sport-reg, sans-serif;
+  font-size: 7vw;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  pointer-events: none;
+  font-kerning: none;
+}
+
+h2 {
+  font-size: 2.2vw;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  font-family: italia, sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
+
+p {
+  font-family: italia, serif;
+  font-size: 18px;
+  letter-spacing: -0.1px;
+}
+
+h1,
+h2,
+h3,
+p {
+  transition: color 0.15s ease;
+}
+
+/* ---------- grid ---------- */
+.grid {
+  height: 100vh;
+  background: url(../images/grid.svg);
+  background-size: 100vh auto;
+  /* Fill width, retain proportions */
+  background-attachment: fixed;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ---------- nav ---------- */
+.nav-wrapper {
+  position: fixed;
+  z-index: 9;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+}
+
+nav {
+  pointer-events: none;
+}
+
+nav h1 {
+  padding: 2.5vw 0 2vw 0;
+}
+
+.center {
+  background-color: blue;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------- social media ---------- */
+
+div.social-media {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+
+.link-insta {
+  width: auto;
+  height: 2.5vw;
+}
+
+/* ---------- draggable ---------- */
+.draggable {
+  color: #fa7268;
+  position: absolute;
+  white-space: nowrap;
+  cursor: grab;
+  pointer-events: all;
+}
+
+#draggable-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  display: none;
+  pointer-events: none;
+}
+
+/* ---------- instructions ---------- */
+.instructions {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fa7268;
+  background-color: #0c2340;
+  z-index: 100;
+}
+
+.instructions h2 {
+  max-width: 650px;
+  line-height: 1.2;
+  font-family: sport-reg;
+}
+
+/* ---------- gallery ---------- */
+section {
+  overflow-x: hidden;
+  background-color: #0c2340;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100vh);
+}
+
+section:first-child {
+  border-top: 1px solid #fa7268;
+}
+
+.content {
+  position: relative;
+}
+
+.content img {
+  position: relative;
+  max-height: 600px;
+  max-width: 600px;
+}
+
+/* ---------- media queries ---------- */
+@media only screen and (max-width: 1025px) {
+  body {
+    overflow: hidden;
+  }
+
+  nav {
+    position: absolute;
+    top: 4vh;
+  }
+
+  .link-insta {
+    height: 3vh;
+  }
+
+  .info h2 {
+    position: absolute;
+    bottom: 2vh;
+  }
+
+  h1 {
+    font-size: 10vw;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  .draggable {
+    font-size: 2vw;
+  }
+
+  .instructions h2 {
+    max-width: 85vw;
+    font-size: 4vw;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .draggable {
+    font-size: 3vw;
+  }
+}

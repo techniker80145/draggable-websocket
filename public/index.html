@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="6oVGXW9vjzZqPAfthLxUzmMxK64Fd6h10CCskvsrYWM"
+    />
+    <title>Forgetful Number</title>
+    <meta
+      name="description"
+      content="We are Forgetful Number, a collective of 38 photography students of the Royal Academy of Art, The Hague"
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  </head>
+
+  <body>
+    <div class="grid"></div>
+
+    <div class="hands">
+      <div class="nav-item" id="cntdwn-hands">&nbsp;</div>
+    </div>
+
+    <!-- centered type -->
+
+    <div class="nav-wrapper">
+      <nav>
+        <h2>Forgetful Number<br />Presents</h2>
+        <h1>A Series of<br />Contradictions</h1>
+        <h2>
+          24 – 27.01.2019<br />Helena van Doeverenplantsoen 3<br />The Hague
+        </h2>
+      </nav>
+    </div>
+
+    <!-- social media -->
+
+    <div class="social-media">
+      <a href="https://www.instagram.com/forgetfulnumber/" target="_blank">
+        <img src="images/insta.svg" class="link-insta" alt="Instagram" />
+      </a>
+    </div>
+
+    <!-- websocket content -->
+
+    <div id="draggable-wrapper">
+      <p class="draggable" id="object-1">
+        Question your perceptions and believes for compassion
+      </p>
+      <p class="draggable" id="object-2">
+        Like everything else, the weather is also a performance.
+      </p>
+      <p class=" draggable" id="object-3">
+        Reality is just a fairytale.
+      </p>
+      <p class=" draggable" id="object-4">
+        One, two, three, knock on the wall!
+      </p>
+      <p class="draggable" id="object-5">
+        We have not seen the ultimate cliche.
+      </p>
+      <p class="draggable" id="object-6">
+        Collect, repeat, organize, make sense, categorize, eliminate!
+      </p>
+      <p class="draggable" id="object-7">
+        “Can you guess my name?”
+      </p>
+      <p class="draggable" id="object-8">
+        Actors rule the world.
+      </p>
+      <p class="draggable" id="object-9">
+        No landscape is innocent.
+      </p>
+      <p class="draggable" id="object-10">
+        All we are is dust in the wind.
+      </p>
+      <p class="draggable" id="object-11">
+        The landscape has an error.
+      </p>
+      <p class="draggable" id="object-12">
+        Grasping the ungraspable
+      </p>
+      <p class="draggable" id="object-13">
+        Identical does not mean the same.
+      </p>
+      <p class="draggable" id="object-14">
+        Life's too short, to be bored and lonely.
+      </p>
+      <p class="draggable" id="object-15">
+        Get struck!
+      </p>
+      <p class="draggable" id="object-16">
+        Three is a crowd.
+      </p>
+      <p class="draggable" id="object-17">
+        Why the fuck am I still a womens rights defender?
+      </p>
+      <p class="draggable" id="object-18">
+        The woman is a piece of flesh without soul.
+      </p>
+      <p class="draggable" id="object-19">
+        Courage has nothing to do with gender.
+      </p>
+      <p class="draggable" id="object-20">
+        There is hope on the other side of the sea.
+      </p>
+      <p class="draggable" id="object-21">
+        Wars end up being forgotten, except by those who fought!
+      </p>
+      <p class="draggable" id="object-22">
+        A good excuse.
+      </p>
+      <p class="draggable" id="object-23">
+        Between Glass Walls
+      </p>
+      <p class="draggable" id="object-24">
+        Capitalism is vertical.
+      </p>
+      <p class="draggable" id="object-25">
+        She’s kinda cool
+      </p>
+      <p class="draggable" id="object-26">
+        There is no such thing as a post-conflict space.
+      </p>
+      <p class="draggable" id="object-27">
+        Johny got his gun.
+      </p>
+      <p class="draggable" id="object-28">
+        I would rather be nude than cute.
+      </p>
+      <p class="draggable" id="object-29">
+        The fear of blushing.
+      </p>
+      <p class="draggable" id="object-30">
+        Facts are irrelevant.
+      </p>
+      <p class="draggable" id="object-31">
+        Gender does not exist.
+      </p>
+      <p class="draggable" id="object-32">
+        The Instinct of Connectedness.
+      </p>
+      <p class="draggable" id="object-33">
+        Images not to be seen.
+      </p>
+      <p class="draggable" id="object-34">
+        Contradictions manifested.
+      </p>
+      <p class="draggable" id="object-35">
+        We are all falling.
+      </p>
+      <p class="draggable" id="object-36">
+        As long as two are one.
+      </p>
+      <p class="draggable" id="object-37">
+        Wolves have no kings.
+      </p>
+      <p class="draggable" id="object-38">
+        In this city, everyone can be a spy.
+      </p>
+    </div>
+
+    <div class="instructions">
+      <h2>
+        <svg
+          width="34px"
+          height="34px"
+          viewBox="0 0 34 34"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            id="Merch"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g id="A4" transform="translate(-62.000000, -147.000000)">
+              <circle
+                id="Oval"
+                stroke="#FA7268"
+                fill-rule="nonzero"
+                cx="78.7401415"
+                cy="164.00801"
+                r="16"
+              ></circle>
+              <path
+                d="M78.9401415,157.50801 C78.2901415,157.50801 77.7401415,156.95801 77.7401415,156.28301 C77.7401415,155.68301 78.2151415,155.08301 78.9401415,155.08301 C79.6401415,155.10801 80.1651415,155.63301 80.1651415,156.28301 C80.1651415,156.95801 79.6151415,157.50801 78.9401415,157.50801 Z M76.0151415,172.93301 L75.9901415,172.00801 C77.4151415,171.88301 77.7901415,171.40801 77.7901415,169.88301 L77.7901415,164.13301 L76.1901415,164.13301 L76.1901415,163.45801 L79.0651415,161.60801 L79.7151415,161.60801 L79.7151415,169.88301 C79.7151415,171.40801 80.0901415,171.88301 81.4901415,172.00801 L81.4901415,172.93301 L76.0151415,172.93301 Z"
+                id="i"
+                fill="#FA7268"
+              ></path>
+            </g>
+          </g></svg
+        ><br /><br />The artwork descriptions are interactive and will remain in
+        place once you leave this site.<br /><br />Create poems, craft
+        sentences, interact with others and leave your mark for the viewers to
+        come…
+      </h2>
+    </div>
+
+    <script src="scripts/websoc.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="config.json"></script>
+  </body>
+</html>
