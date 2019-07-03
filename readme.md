@@ -1,5 +1,0 @@
-# Websocket Gallery
-
-```
-npm start
-```
