@@ -9,7 +9,7 @@
     "author": "moritz salla",
     "license": "ISC",
     "dependencies": {
-        "data-store": "^3.1.0",
+        "data-store": "^4.0.3",
         "express": "^4.16.4",
         "http": "0.0.0",
         "socket.io": "^2.1.1"
